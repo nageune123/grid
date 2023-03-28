@@ -1,16 +1,39 @@
 .father{
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
-   gap: 10px;
-   grid-template-rows: 100px 50px 300px;
-
+    display: flex;
+    /* flex-direction: row-reverse;  */
+    /* Main Axis */
+    justify-content: space-around;
+    /* Cross Axis */
+    /* align-items: center; */
+    /* child의 크기를 유지 wrap */
+    /* align-content line변경 */
+    /* flex-wrap: wrap; */
+    /* flex-basis 값은 flex-grow와 flex-shrink 속성과 함께 사용됩니다. 이 세 가지 속성을 조합하여 flex 항목의 크기와 배치를 조정할 수 있습니다.  */
+    height: 200vh;
 }   
 .child{
-flex-basis: 30%;
-background-color: peru;
-color: white;
-font-size: 50px;
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 300px;
+    height: 200px;
+    background-color: peru;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.child:nth-child(2){
+    background-color: black;
+    /* flex-shrink:1 이 기본값  컨테이너 내에서 사용 가능한 공간이 충분하지 않을 때 flex 항목이 얼마나 축소해야 하는지를 제어 */
+    flex-grow: 1;
+}
+
+
+
+
+    /* align-self은 cross axis 방향에 있는 item의 위치를 바꿈 align-self: center; */
+    
+    /* 기본적으로 box의 order는 0이다  order: 3;*/
+    
+
+
